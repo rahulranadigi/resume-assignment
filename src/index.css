@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --header-color: #0606ff;
+  --main-color: #000000;
+  --text-color: #3c3c3c;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Lexend", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+#root {
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}

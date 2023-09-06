@@ -1,0 +1,33 @@
+.resume {
+  width: 803px;
+  height: max-content;
+  min-height: 1100px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.upload__data {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.upload__data > button {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.file__name {
+  color: var(--header-color);
+  font-size: 1.2rem;
+  margin-top: 10px;
+}

@@ -1,0 +1,120 @@
+{
+  "name": "Rahul Ramdev Rana",
+  "details": {
+    "email": "rr8407084@gmail.com",
+    "mobile": "+91 8600639680",
+    "links": [
+      {
+        "id": 1,
+        "linkname": "rahul.rana.com",
+        "url": "https://my-personal-portfolio-gamma.vercel.app/"
+      },
+      {
+        "id": 2,
+        "linkname": "Linkedin",
+        "url": "https://www.linkedin.com/in/rahul-rana-663877241/"
+      },
+      {
+        "id": 3,
+        "linkname": "Github",
+        "url": "https://github.com/RahulRana0707"
+      },
+      {
+        "id": 4,
+        "linkname": "Leetcode",
+        "url": "https://leetcode.com/Rahul_Rana07/"
+      }
+    ]
+  },
+  "summary": "Results-driven web developer with a Bachelor’s degree in IT from Viva College. Passionate about developing innovative and user-friendly web applications. Skilled in HTML, CSS, JavaScript, React, and Next.js. Committed to delivering high-quality code and providing exceptional user experiences.",
+  "userskills": [
+    {
+      "id": 5,
+      "category": "Languages",
+      "skills": ["JavaScript", "HTML", "CSS", "Python"]
+    },
+    {
+      "id": 6,
+      "category": "Frameworks",
+      "skills": ["Next Js", "SCSS"]
+    },
+    {
+      "id": 7,
+      "category": "Libraries",
+      "skills": [
+        "React JS",
+        "Material",
+        "Redux",
+        "React Router",
+        "Tailwind Css"
+      ]
+    },
+    {
+      "id": 8,
+      "category": "Databases",
+      "skills": ["MongoDB", "MySql"]
+    },
+    {
+      "id": 9,
+      "category": "Dev Tools",
+      "skills": ["Visual Studio Code", "GitHub", "Git"]
+    }
+  ],
+  "experience": [
+    {
+      "id": 16,
+      "companyName": "Sensys Technologies Pvt. Ltd",
+      "designation": "Programmer",
+      "joining": "March 2022",
+      "leaving": "present",
+      "responsibility": [
+        "Designed and developed dynamic and responsive websites using HTML, CSS, JavaScript, and C Sharp",
+        "Improved website performance and speed through optimization techniques"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 10,
+      "institution": "University of Mumbai",
+      "stuided": "Bachelor of Science in Information Technology",
+      "start": "May 2019",
+      "completed": "August 2022"
+    }
+  ],
+  "projects": [
+    {
+      "id": 13,
+      "projectName": "Crypto Castle",
+      "projectLink": "https://crypto-castle.vercel.app/",
+      "technologiesUsed": ["React.js", "Axios", "Scss", "API"],
+      "sourceCodeLink": "https://github.com/your-username/crypto-castle",
+      "projectDescription": [
+        "Designed and developed a modern website showcasing trending cryptocurrencies and providing comprehensive information.",
+        "Implemented a well-structured List of Crypto Table and Exchanges page for easy navigation.",
+        "Included pagination for efficient browsing of Crypto Coins and Exchanges with 100 items per page.",
+        "Offered Dark/Light Mode for personalized visual preferences and a Search Bar for quick coin lookup.",
+        "Provided detailed Crypto Details, including rank, user trust, high/low price, and currency options (INR, USD, Euro).",
+        "Deployed the website on Vercel for seamless hosting and accessibility with CI/CD Pipeline."
+      ]
+    },
+    {
+      "id": 14,
+      "projectName": "Personal Portfolio",
+      "projectLink": "https://my-personal-portfolio-gamma.vercel.app/",
+      "technologiesUsed": ["React", "SCSS", "JavaScript"],
+      "sourceCodeLink": "https://github.com/your-username/personal-portfolio",
+      "projectDescription": [
+        "Developed a personal portfolio website using React for UI and SCSS for styling, featuring modern web design principles.",
+        "Implemented Dark and Light Mode for personalized visual preferences, enhancing responsive user experience."
+      ]
+    }
+  ],
+  "hobbies": [
+    {
+      "id": 15,
+      "hobbyName": "Football",
+      "description": "Engaged in regular football sessions, promoting physical activity, teamwork, and strategic thinking"
+    }
+  ]
+}

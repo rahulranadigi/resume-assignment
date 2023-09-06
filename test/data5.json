@@ -1,0 +1,34 @@
+{
+  "name": "Rahul Ramdev Rana",
+  "details": {
+    "city": "Boisar",
+    "state": "Maharashtra",
+    "country": "India",
+    "links": [
+      {
+        "id": 1,
+        "linkname": "rahul.rana.com",
+        "url": "https://my-personal-portfolio-gamma.vercel.app/"
+      },
+      {
+        "id": 2,
+        "linkname": "Linkedin",
+        "url": "https://www.linkedin.com/in/rahul-rana-663877241/"
+      },
+      {
+        "id": 3,
+        "linkname": "Github",
+        "url": "https://github.com/RahulRana0707"
+      },
+      {
+        "id": 4,
+        "linkname": "Leetcode",
+        "url": "https://leetcode.com/Rahul_Rana07/"
+      }
+    ]
+  },
+  "experience": [],
+  "education": [],
+  "projects": [],
+  "hobbies": []
+}

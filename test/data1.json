@@ -1,0 +1,88 @@
+{
+  "name": "Amit Kumar",
+  "details": {
+    "email": "amit.kumar@example.com",
+    "mobile": "+91 9876543210",
+    "state": "Maharashtra",
+    "country": "India"
+  },
+  "summary": "Experienced software engineer with a Bachelor’s degree in Computer Science. Proficient in Java, C++, and Python. Passionate about building scalable web applications and solving complex problems.",
+  "userskills": [
+    {
+      "category": "Languages",
+      "skills": []
+    },
+    {
+      "category": "Frameworks",
+      "skills": ["Spring Boot", "React"]
+    },
+    {
+      "category": "Libraries",
+      "skills": ["Redux", "Node.js", "Express.js"]
+    },
+    {
+      "category": "Databases",
+      "skills": ["PostgreSQL", "MongoDB"]
+    },
+    {
+      "category": "Dev Tools",
+      "skills": ["IntelliJ IDEA", "Git", "JIRA"]
+    }
+  ],
+  "experience": [
+    {
+      "companyName": "Tech Solutions Inc.",
+      "designation": "Software Engineer",
+      "joining": "June 2018",
+      "leaving": "present",
+      "responsibility": []
+    },
+    {
+      "companyName": "CodeCrafters",
+      "designation": "Junior Developer",
+      "joining": "January 2016",
+      "leaving": "May 2018",
+      "responsibility": [
+        "Assisted in the development of responsive web interfaces using React",
+        "Participated in code reviews and provided code optimizations",
+        "Debugged and fixed issues reported by clients"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "start": "August 2014",
+      "completed": "May 2018"
+    }
+  ],
+  "projects": [
+    {
+      "projectName": "E-commerce Platform",
+      "projectLink": "https://ecommerce-app.example.com/",
+      "technologiesUsed": ["React", "Node.js", "MongoDB"],
+      "sourceCodeLink": "https://github.com/amitkumar/ecommerce-app",
+      "projectDescription": [
+        "Designed and developed a full-stack e-commerce platform",
+        "Implemented user authentication and product catalog features",
+        "Integrated payment gateways for seamless transactions"
+      ]
+    },
+    {
+      "projectName": "Inventory Management System",
+      "projectLink": "https://inventory-app.example.com/",
+      "technologiesUsed": ["Java", "Spring Boot", "PostgreSQL"],
+      "sourceCodeLink": "https://github.com/amitkumar/inventory-app",
+      "projectDescription": [
+        "Developed a web-based inventory management system for a retail client",
+        "Designed a user-friendly interface for tracking and managing inventory",
+        "Implemented reporting and analytics features for data insights"
+      ]
+    }
+  ],
+  "hobbies": [
+    {
+      "hobbyName": "Photography",
+      "description": "Passionate about capturing moments and exploring different photography styles"
+    }
+  ]
+}

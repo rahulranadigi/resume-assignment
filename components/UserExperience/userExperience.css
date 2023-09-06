@@ -1,0 +1,26 @@
+.expercience {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.experience__details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.company__name,
+.experience__period {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.experience__period {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
