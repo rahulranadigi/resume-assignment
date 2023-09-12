@@ -11,7 +11,7 @@ const UserEducation = ({ education, isError }) => {
           className="user__skills"
           style={{ color: "red", fontSize: "2rem" }}
         >
-          *Education is mandatory
+          *Education is mandatory edit json
         </div>
       </div>
     );
@@ -25,7 +25,7 @@ const UserEducation = ({ education, isError }) => {
             key={data?.id}
             name={data?.institution ? data.institution : null}
             degree={data?.stuided ? data?.stuided : null}
-            locaion={[
+            location={[
               data?.city ? data.city : "NA",
               data?.state ? data.state : "NA",
               data?.country ? data.country : "NA",

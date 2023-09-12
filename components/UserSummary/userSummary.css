@@ -3,7 +3,4 @@
   font-weight: 400;
   border: 2px solid transparent;
 }
-.summary__paragraph:hover{
-  border: 2px solid var(--header-color);
-}
 

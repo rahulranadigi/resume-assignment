@@ -16,6 +16,19 @@ const Resume = () => {
     setUserJson(null);
     setFileName("");
   };
+  const handleDownload = () => {
+    const jsonString = JSON.stringify(userJson);
+    const blob = new Blob([jsonString], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "yourResumeJson.json";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <main className="resume">
       <HeaderSection
@@ -49,6 +62,13 @@ const Resume = () => {
       )}
       <div className="upload__data">
         <button onClick={handleClick}>Upload Data</button>
+        <button
+          style={{ marginTop: "1rem" }}
+          id="downloadBtn"
+          onClick={handleDownload}
+        >
+          Download Data
+        </button>
         <span className="file__name">{fileName}</span>
       </div>
     </main>

@@ -32,24 +32,24 @@ const Upload = () => {
     inputRef.current.value = null;
   };
   useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (event.ctrlKey && event.key === "u") {
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && (event.key === "u" || event.key === "U")) {
         event.preventDefault();
         inputRef.current.click();
       }
     };
-    document.addEventListener("keydown", handleKeyPress);
+    document.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.removeEventListener("keydown", handleKeyPress);
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   return (
-    <main className="upload__container flex">
+    <main className="upload__container flexCenter">
       <form
         action=""
-        className="form flex"
+        className="form flexCenter"
         onClick={() => {
           inputRef.current.click();
         }}
@@ -66,12 +66,12 @@ const Upload = () => {
           }}
         />
         {fileName ? (
-          <div className="folder flex">
+          <div className="folder flexCenter">
             <FcFolder className="folder__icon" />
             <span className="folder__name">{fileName}</span>
           </div>
         ) : (
-          <div className="folder flex">
+          <div className="folder flexCenter">
             <HiUpload className="folder__icon" />
             <span className="folder__name">Upload your Json...</span>
           </div>

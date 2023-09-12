@@ -1,0 +1,4 @@
+.hobby__description::before{
+    content: ":";
+    margin-right: 3px;
+}

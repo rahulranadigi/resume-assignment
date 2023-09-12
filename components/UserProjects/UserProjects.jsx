@@ -2,12 +2,13 @@ import React from "react";
 import ProjectComponent from "../global/ProjectComponent";
 import ResumeSection from "../global/ResumeSection";
 
-const UserProjects = ({projects }) => {
+const UserProjects = ({ projects }) => {
   return (
     <div className="user__section">
       <ResumeSection name={"PROJECTS"} />
-      {projects?.map((project) => {
+      {projects?.map((project, index) => {
         return (
+          //
           <ProjectComponent
             key={project?.id}
             name={project?.projectName}
@@ -15,6 +16,7 @@ const UserProjects = ({projects }) => {
             source={project?.sourceCodeLink}
             technology={project?.technologiesUsed}
             features={project?.projectDescription}
+            index={index}
           />
         );
       })}

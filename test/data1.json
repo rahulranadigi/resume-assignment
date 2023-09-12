@@ -1,36 +1,43 @@
 {
+  "id": "1",
   "name": "Amit Kumar",
   "details": {
     "email": "amit.kumar@example.com",
-    "mobile": "+91 9876543210",
+    "mobile": "9876543210",
     "state": "Maharashtra",
     "country": "India"
   },
   "summary": "Experienced software engineer with a Bachelor’s degree in Computer Science. Proficient in Java, C++, and Python. Passionate about building scalable web applications and solving complex problems.",
   "userskills": [
     {
+      "id": "2",
       "category": "Languages",
       "skills": []
     },
     {
+      "id": "3",
       "category": "Frameworks",
       "skills": ["Spring Boot", "React"]
     },
     {
+      "id": "4",
       "category": "Libraries",
       "skills": ["Redux", "Node.js", "Express.js"]
     },
     {
+      "id": "5",
       "category": "Databases",
       "skills": ["PostgreSQL", "MongoDB"]
     },
     {
+      "id": "6",
       "category": "Dev Tools",
       "skills": ["IntelliJ IDEA", "Git", "JIRA"]
     }
   ],
   "experience": [
     {
+      "id": "7",
       "companyName": "Tech Solutions Inc.",
       "designation": "Software Engineer",
       "joining": "June 2018",
@@ -38,6 +45,7 @@
       "responsibility": []
     },
     {
+      "id": "8",
       "companyName": "CodeCrafters",
       "designation": "Junior Developer",
       "joining": "January 2016",
@@ -51,12 +59,14 @@
   ],
   "education": [
     {
+      "id": "9",
       "start": "August 2014",
       "completed": "May 2018"
     }
   ],
   "projects": [
     {
+      "id": "10",
       "projectName": "E-commerce Platform",
       "projectLink": "https://ecommerce-app.example.com/",
       "technologiesUsed": ["React", "Node.js", "MongoDB"],
@@ -68,6 +78,7 @@
       ]
     },
     {
+      "id": "11",
       "projectName": "Inventory Management System",
       "projectLink": "https://inventory-app.example.com/",
       "technologiesUsed": ["Java", "Spring Boot", "PostgreSQL"],
@@ -81,6 +92,7 @@
   ],
   "hobbies": [
     {
+      "id": "12",
       "hobbyName": "Photography",
       "description": "Passionate about capturing moments and exploring different photography styles"
     }

@@ -1,25 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
-import { BiSave } from "react-icons/bi";
-import { useState } from "react";
+import HobbyNameWrapper from "./HobbyNameWrapper";
+import HobbyDescriptionName from "./HobbyDescriptionWrapper";
 
 const HobbyComponent = ({ hobbies }) => {
-  const [isEdit, setIsEdit] = useState(true);
   return (
     <ul className="list">
-      {hobbies?.map((hobby) => {
+      {hobbies?.map((hobby, index) => {
         return (
-          <li className="list__items project__list">
+          <li className="list__items project__list" key={hobby?.id}>
             <div style={{ display: "flex", gap: "5px" }}>
-              <span
-                style={{
-                  color: `${hobby?.hobbyName ? "var(--text-color)" : "red"}`,
-                }}
-              >
-                {hobby?.hobbyName ? hobby?.hobbyName : "*Hobby Name Mandatory"}
-              </span>
-              <p>{hobby?.description ? ` : ${hobby?.description}` : ""}</p>
-              {isEdit ? <AiFillEdit /> : <BiSave />}
+              <HobbyNameWrapper hobby={hobby} index={index} />
+              <HobbyDescriptionName hobby={hobby} index={index} />
             </div>
           </li>
         );

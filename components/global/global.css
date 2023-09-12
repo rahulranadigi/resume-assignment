@@ -3,9 +3,6 @@
   color: var(--main-color);
   border: 2px solid transparent;
 }
-.heading:hover {
-  border: 2px solid var(--header-color);
-}
 .link {
   font-size: 0.8rem;
   color: var(--text-color);
@@ -128,10 +125,28 @@
   font-weight: 400;
 }
 
-.edit__btn{
+.edit__btn {
   display: none;
 }
-.skill__container:hover .edit__btn{
+.skill__container:hover .edit__btn {
   display: block;
   cursor: pointer;
+}
+.flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.editBtn {
+  padding: 0.1rem 0.2rem;
+  font-size: 0.8rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.hover__edit {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 0px;
 }

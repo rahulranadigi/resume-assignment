@@ -1,29 +1,30 @@
 {
+  "id": "40",
   "name": "Rahul Ramdev Rana",
   "details": {
     "email": "rr8407084@gmail.com",
-    "mobile": "+91 8600639680",
+    "mobile": "8600639680",
     "city": "Boisar",
     "state": "Maharashtra",
     "country": "India",
     "links": [
       {
-        "id": 1,
+        "id": "41",
         "linkname": "rahul.rana.com",
         "url": "https://my-personal-portfolio-gamma.vercel.app/"
       },
       {
-        "id": 2,
+        "id": "42",
         "linkname": "Linkedin",
         "url": "https://www.linkedin.com/in/rahul-rana-663877241/"
       },
       {
-        "id": 3,
+        "id": "43",
         "linkname": "Github",
         "url": "https://github.com/RahulRana0707"
       },
       {
-        "id": 4,
+        "id": "44",
         "linkname": "Leetcode",
         "url": "https://leetcode.com/Rahul_Rana07/"
       }
@@ -34,7 +35,7 @@
   "experience": [],
   "education": [
     {
-      "id": 10,
+      "id": "45",
       "institution": "University of Mumbai",
       "stuided": "Bachelor of Science in Information Technology",
       "city": "Virar",

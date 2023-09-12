@@ -5,10 +5,14 @@
   align-items: flex-end;
 }
 .user__intro_links {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 5px;
+}
+.user__intro_links:hover > .hover__edit {
+  display: flex;
 }
 .user__data {
   display: flex;

@@ -1,30 +1,156 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "./Link";
 import ListComponent from "./ListComponent";
 import Heading from "./Heading";
+import InputComponent from "./InputComponent";
+import { AiFillEdit } from "react-icons/ai";
 
-const ProjectComponent = ({ name, href, technology, features, source }) => {
+const ProjectComponent = ({
+  name,
+  href,
+  technology,
+  features,
+  source,
+  index,
+}) => {
+  const [isProjectNameEditable, setIsProjectNameEditable] = useState(false);
+  const [isSourceEditable, setIsSourceEditable] = useState(false);
+  const [isTechEditable, setIsTechEditable] = useState(false);
+  const [isName, setIsName] = useState(false);
+
   return (
     <section className="project__section">
       <div className="project__header">
-        {name ? (
-          <Link href={href} name={name} className={"bold"} />
+        {isProjectNameEditable ? (
+          <InputComponent
+            type="text"
+            data={isName ? name : href}
+            setEditable={setIsProjectNameEditable}
+            fieldName={
+              isName
+                ? `projects.${index}.projectName`
+                : `projects.${index}.projectLink`
+            }
+            placeholder={isName ? "Project name" : "Project Link"}
+            isTextarea={false}
+          />
+        ) : name ? (
+          <div className="flex">
+            <Link href={href} name={name} className="bold" />
+            <span
+              className="editBtn"
+              onClick={() => {
+                setIsProjectNameEditable(true);
+                setIsName(true);
+              }}
+            >
+              Edit Name
+            </span>
+            <span
+              className="editBtn"
+              onClick={() => {
+                setIsProjectNameEditable(true);
+                setIsName(false);
+              }}
+            >
+              Edit Link
+            </span>
+          </div>
         ) : (
-          <Heading error={"Project Name"} size={".8rem"} />
+          <div className="flex">
+            <Heading error="Project Name" size=".8rem" />
+            <span
+              className="editBtn"
+              onClick={() => {
+                setIsProjectNameEditable(true);
+                setIsName(true);
+              }}
+            >
+              Edit Name
+            </span>
+            <span
+              className="editBtn"
+              onClick={() => {
+                setIsProjectNameEditable(true);
+                setIsName(false);
+              }}
+            >
+              Edit Link
+            </span>
+          </div>
         )}
-        <p
-          className="technologies"
-          style={{ color: `${technology ? "var(--text-color)" : "red"}` }}
-        >
-          {technology ? technology?.join(", ") : "*Technologies is Mandatory"}
-        </p>
-        {source ? (
-          <Link href={source} name={"Source Code"} />
+
+        {isTechEditable ? (
+          <InputComponent
+            placeholder={"Technologies"}
+            data={technology ? technology?.join(", ") : ""}
+            fieldName={`projects.${index}.technologiesUsed`}
+            isTextarea={false}
+            setEditable={setIsTechEditable}
+            type={"text"}
+            seperator={","}
+            index={index}
+            isTrim={false}
+          />
         ) : (
-          <Heading error={"Source Link"} size={".8rem"} />
+          <div className="flex">
+            <p
+              className="technologies"
+              style={{
+                color: `${
+                  technology && technology[0].trim() !== ""
+                    ? "var(--text-color)"
+                    : "red"
+                }`,
+              }}
+            >
+              {technology && technology[0].trim() !== ""
+                ? technology?.join(", ")
+                : "*Technologies is Mandatory"}
+            </p>
+            <AiFillEdit
+              onClick={() => {
+                setIsTechEditable(true);
+              }}
+            />
+          </div>
+        )}
+        {isSourceEditable ? (
+          <InputComponent
+            data={source}
+            fieldName={`projects.${index}.sourceCodeLink`}
+            isTextarea={false}
+            setEditable={setIsSourceEditable}
+            type={"text"}
+            placeholder={"Source Link"}
+          />
+        ) : source ? (
+          <div className="flex">
+            <Link href={source} name={"Source Code"} />
+            <AiFillEdit
+              onClick={() => {
+                setIsSourceEditable(true);
+              }}
+            />
+          </div>
+        ) : (
+          <div className="flex">
+            <Heading error={"Source Link"} size={".8rem"} />
+            <AiFillEdit
+              onClick={() => {
+                setIsSourceEditable(true);
+              }}
+            />
+          </div>
         )}
       </div>
-      <ListComponent items={features} isProject={true} />
+
+      <ListComponent
+        items={features}
+        isProject={true}
+        fieldName={`projects.${index}.projectDescription`}
+        index={index}
+      />
     </section>
   );
 };

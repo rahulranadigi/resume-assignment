@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 10px;
 }
-.flex {
+.flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
