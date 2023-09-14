@@ -2,3 +2,10 @@
     content: ":";
     margin-right: 3px;
 }
+.hobby__description{
+    max-width: 550px;
+    color: var(--text-color);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

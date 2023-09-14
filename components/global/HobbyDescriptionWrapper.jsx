@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
 import InputComponent from "./InputComponent";
+import EditIcon from "./EditIcon";
 
 const HobbyDescriptionName = ({ hobby, index }) => {
   const [isDescriptionEditable, setIsDescriptionEditable] = useState(false);
@@ -21,17 +22,18 @@ const HobbyDescriptionName = ({ hobby, index }) => {
           style={{ justifyContent: "flex-start", alignItems: "center" }}
         >
           <p
-          className="hobby__description"
+            className="hobby__description"
             style={{
-              color: `${hobby?.hobbyName ? "var(--text-color)" : "red"}`,
+              color: `${hobby?.description ? "var(--text-color)" : "red"}`,
             }}
+            title={hobby?.description}
           >
             {hobby?.description
               ? `${hobby?.description}`
               : "*Description Mandatory"}
           </p>
-          <AiFillEdit
-            onClick={() => {
+          <EditIcon
+            handleSetEditable={() => {
               setIsDescriptionEditable(true);
             }}
           />

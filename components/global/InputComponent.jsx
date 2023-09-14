@@ -2,6 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import { Context } from "../../provider/ContextProvider";
 import { validateEmail, validateMobileNumber } from "../../helper/helper";
 import { toast } from "react-toastify";
+import './InputComponent.css'
 
 const InputComponent = ({
   type,
@@ -10,7 +11,6 @@ const InputComponent = ({
   fieldName,
   isTextarea,
   seperator,
-  index,
   isLocation,
   isPeriod,
   isExp,
@@ -99,6 +99,7 @@ const InputComponent = ({
     <>
       {isTextarea ? (
         <textarea
+        className="textarea"
           id="textarea"
           name="textarea"
           rows="4"
@@ -112,15 +113,11 @@ const InputComponent = ({
         ></textarea>
       ) : (
         <input
+        className="edit__input"
           type={type}
           value={value}
           onChange={(e) => {
             setValue(e.target.value);
-          }}
-          style={{
-            border: "1px solid blue",
-            padding: ".1rem .2rem",
-            fontSize: ".8rem",
           }}
           ref={inputRef}
           onBlur={handleUpdate}

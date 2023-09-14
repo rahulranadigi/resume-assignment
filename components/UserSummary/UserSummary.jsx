@@ -3,6 +3,7 @@ import ResumeSection from "../global/ResumeSection";
 import "./userSummary.css";
 import InputComponent from "../global/InputComponent";
 import { AiFillEdit } from "react-icons/ai";
+import EditIcon from "../global/EditIcon";
 
 const UserSummary = ({ summary, isSummary }) => {
   const [isSummaryEditable, setIsSummaryEditable] = useState(false);
@@ -30,8 +31,8 @@ const UserSummary = ({ summary, isSummary }) => {
           >
             {isSummary ? summary : "*Summary is required"}
           </p>
-          <AiFillEdit
-            onClick={() => {
+          <EditIcon
+            handleSetEditable={() => {
               setIsSummaryEditable(true);
             }}
           />

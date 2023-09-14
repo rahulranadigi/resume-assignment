@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Heading from "./Heading";
 import InputComponent from ".././global/InputComponent";
 import { AiFillEdit } from "react-icons/ai";
+import EditIcon from "./EditIcon";
 
 const EducationComponent = ({ name, degree, location, period, index }) => {
   const [isHeadingEditable, setIsHeadingEditable] = useState(false);
@@ -28,11 +29,7 @@ const EducationComponent = ({ name, degree, location, period, index }) => {
               error={name ? name : "College Name"}
               fieldName={`education.${index}.institution`}
             />
-            <AiFillEdit
-              onClick={() => {
-                setIsHeadingEditable(true);
-              }}
-            />
+            <EditIcon handleSetEditable={()=>{setIsHeadingEditable(true)}}/>
           </div>
         )}
         {isCollegeNameEditable ? (
@@ -55,11 +52,7 @@ const EducationComponent = ({ name, degree, location, period, index }) => {
             >
               {degree ? degree : "*Degree Mandatory"}
             </p>
-            <AiFillEdit
-              onClick={() => {
-                setIsCollegeNameEditable(true);
-              }}
-            />
+            <EditIcon handleSetEditable={()=>{setIsCollegeNameEditable(true)}}/>
           </div>
         )}
       </div>
@@ -86,11 +79,7 @@ const EducationComponent = ({ name, degree, location, period, index }) => {
             >
               {location}
             </span>
-            <AiFillEdit
-              onClick={() => {
-                setIsLocationEditable(true);
-              }}
-            />
+            <EditIcon handleSetEditable={()=>{setIsLocationEditable(true)}}/>
           </div>
         )}
         {isPeriodEditable ? (
@@ -117,11 +106,7 @@ const EducationComponent = ({ name, degree, location, period, index }) => {
             >
               {period ? period : "*DOJ/DOL Mandatory"}
             </span>
-            <AiFillEdit
-              onClick={() => {
-                setIsPeriodEditable(true);
-              }}
-            />
+            <EditIcon handleSetEditable={()=>{setIsPeriodEditable(true)}}/>
           </div>
         )}
       </div>

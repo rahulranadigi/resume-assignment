@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
 import InputComponent from "./InputComponent";
+import EditIcon from "./EditIcon";
 
 const HobbyNameWrapper = ({ hobby, index }) => {
   const [isHobbyNameEditable, setIsHobbyNameEditable] = useState(false);
@@ -28,11 +29,7 @@ const HobbyNameWrapper = ({ hobby, index }) => {
           >
             {hobby?.hobbyName ? hobby?.hobbyName : "*Hobby Name Mandatory"}
           </span>
-          <AiFillEdit
-            onClick={() => {
-              setIsHobbyNameEditable(true);
-            }}
-          />
+          <EditIcon handleSetEditable={()=>{setIsHobbyNameEditable(true)}}/>
         </div>
       )}
     </>

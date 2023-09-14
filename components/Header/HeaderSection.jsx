@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import "./headerSection.css";
 import Heading from "../global/Heading";
-import Link from "../global/Link";
 import Line from "../global/Line";
 import LabelData from "../global/LabelData";
 import InputComponent from "../global/InputComponent";
-import { AiFillEdit } from "react-icons/ai";
-import ProfileLink from "../global/ProfileLink";
 import ProfileLinkComponent from "../global/ProfileLinkComponent";
+import EditIcon from "../global/EditIcon";
 
 const HeaderSection = ({ name, links, details }) => {
   const [isLocationEdit, setIsLoactionEdit] = useState(false);
@@ -31,12 +29,13 @@ const HeaderSection = ({ name, links, details }) => {
             style={{ alignItems: "center", justifyContent: "flex-start" }}
           >
             <Heading
+              className={"long__text"}
               name={name}
               size={"1.5rem"}
               error={name ? name : "Username"}
             />
-            <AiFillEdit
-              onClick={() => {
+            <EditIcon
+              handleSetEditable={() => {
                 setIsHeadingEditable(true);
               }}
             />
@@ -95,9 +94,9 @@ const HeaderSection = ({ name, links, details }) => {
                   : true
               }
             />
-            <AiFillEdit
-              onClick={() => {
-                setIsLoactionEdit(true);
+            <EditIcon
+              handleSetEditable={() => {
+                setIsMobileEditable(true);
               }}
             />
           </div>
@@ -122,8 +121,8 @@ const HeaderSection = ({ name, links, details }) => {
                 href={""}
                 isError={details?.email ? false : true}
               />
-              <AiFillEdit
-                onClick={() => {
+              <EditIcon
+                handleSetEditable={() => {
                   setIsEmailEditable(true);
                 }}
               />
@@ -148,8 +147,8 @@ const HeaderSection = ({ name, links, details }) => {
                 isLink={false}
                 isError={details?.mobile ? false : true}
               />
-              <AiFillEdit
-                onClick={() => {
+              <EditIcon
+                handleSetEditable={() => {
                   setIsMobileEditable(true);
                 }}
               />

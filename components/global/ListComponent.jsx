@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
 import InputComponent from "./InputComponent";
+import EditIcon from "./EditIcon";
 
 const ListComponent = ({ items, isProject, fieldName, index }) => {
   var length = items.join().length;
@@ -41,11 +42,7 @@ const ListComponent = ({ items, isProject, fieldName, index }) => {
               *Description Must be more than 100 word
             </li>
           )}
-          <AiFillEdit
-            onClick={() => {
-              setIsFeatureEditable(true);
-            }}
-          />
+          <EditIcon handleSetEditable={()=>{setIsFeatureEditable(true)}}/>
         </ul>
       )}
     </>

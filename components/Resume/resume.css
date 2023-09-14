@@ -1,9 +1,10 @@
+@import "../../src/index.css";
 .resume {
   width: 803px;
   height: max-content;
   min-height: 1100px;
-  background: white;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background: var(--color-background);
+  box-shadow: var(--box-shadow);
   padding: 2rem;
   display: flex;
   justify-content: flex-start;

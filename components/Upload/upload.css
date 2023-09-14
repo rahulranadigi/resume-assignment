@@ -14,6 +14,7 @@
   width: 400px;
   height: 250px;
   border: 2px dashed var(--header-color);
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -41,9 +42,13 @@
 .folder__icon {
   width: 100px;
   height: 100px;
+  color: var(--main-color);
 }
 .absolute{
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.folder__name{
+  color: var(--text-color);
 }

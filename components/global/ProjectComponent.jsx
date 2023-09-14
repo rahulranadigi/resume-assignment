@@ -3,7 +3,7 @@ import Link from "./Link";
 import ListComponent from "./ListComponent";
 import Heading from "./Heading";
 import InputComponent from "./InputComponent";
-import { AiFillEdit } from "react-icons/ai";
+import EditIcon from "./EditIcon";
 
 const ProjectComponent = ({
   name,
@@ -108,8 +108,8 @@ const ProjectComponent = ({
                 ? technology?.join(", ")
                 : "*Technologies is Mandatory"}
             </p>
-            <AiFillEdit
-              onClick={() => {
+            <EditIcon
+              handleSetEditable={() => {
                 setIsTechEditable(true);
               }}
             />
@@ -127,8 +127,8 @@ const ProjectComponent = ({
         ) : source ? (
           <div className="flex">
             <Link href={source} name={"Source Code"} />
-            <AiFillEdit
-              onClick={() => {
+            <EditIcon
+              handleSetEditable={() => {
                 setIsSourceEditable(true);
               }}
             />
@@ -136,8 +136,8 @@ const ProjectComponent = ({
         ) : (
           <div className="flex">
             <Heading error={"Source Link"} size={".8rem"} />
-            <AiFillEdit
-              onClick={() => {
+            <EditIcon
+              handleSetEditable={() => {
                 setIsSourceEditable(true);
               }}
             />

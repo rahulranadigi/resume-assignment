@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectComponent from "../global/ProjectComponent";
 import ResumeSection from "../global/ResumeSection";
+import './UserProjects.css'
 
 const UserProjects = ({ projects }) => {
   return (

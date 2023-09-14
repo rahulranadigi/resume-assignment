@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import InputComponent from "./InputComponent";
 import { AiFillEdit } from "react-icons/ai";
 import Heading from "./Heading";
+import EditIcon from "./EditIcon";
 
 const DesignationWrapper = ({ data, index }) => {
   const [isHeadingEditable, setIsHeadingEditable] = useState(false);
@@ -30,11 +31,7 @@ const DesignationWrapper = ({ data, index }) => {
             error={data?.designation ? data.designation : "User Role"}
             fieldName={`experience.${index}.designation`}
           />
-          <AiFillEdit
-            onClick={() => {
-              setIsHeadingEditable(true);
-            }}
-          />
+          <EditIcon handleSetEditable={()=>{setIsHeadingEditable(true)}}/>
         </div>
       )}
     </>

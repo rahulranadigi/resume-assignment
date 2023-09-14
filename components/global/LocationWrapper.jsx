@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InputComponent from "./InputComponent";
 import { AiFillEdit } from "react-icons/ai";
+import EditIcon from "./EditIcon";
 
 const LocationWrapper = ({ data, index }) => {
   const [isLoactionEditable, setIsLocationEditable] = useState(false);
@@ -38,8 +39,8 @@ const LocationWrapper = ({ data, index }) => {
               data?.country ? data?.country : "NA",
             ].join(", ")}
           </span>
-          <AiFillEdit
-            onClick={() => {
+          <EditIcon
+            handleSetEditable={() => {
               setIsLocationEditable(true);
             }}
           />

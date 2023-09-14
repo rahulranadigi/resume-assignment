@@ -1,0 +1,11 @@
+.textarea{
+    background-color: var(--color-background);
+    color: var(--text-color);
+}
+.edit__input{
+    border: 1px solid blue;
+    padding: .1rem .2rem;
+    font-size: .8rem;
+    background-color: var(--color-background);
+    color: var(--text-color);
+}

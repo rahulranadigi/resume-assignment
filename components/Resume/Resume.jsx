@@ -70,6 +70,7 @@ const Resume = () => {
           Download Data
         </button>
         <span className="file__name">{fileName}</span>
+        
       </div>
     </main>
   );

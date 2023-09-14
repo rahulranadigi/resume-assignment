@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import InputComponent from "./InputComponent";
 import { AiFillEdit } from "react-icons/ai";
+import EditIcon from "./EditIcon";
 
 const CompanyWrapper = ({ data, index }) => {
   const [isCompanyEditable, setIsCompanyEditable] = useState(false);
+  
   return (
     <>
       {isCompanyEditable ? (
@@ -25,11 +27,7 @@ const CompanyWrapper = ({ data, index }) => {
           >
             {data?.companyName ? data.companyName : "*Company Name Mandatory"}
           </p>
-          <AiFillEdit
-            onClick={() => {
-              setIsCompanyEditable(true);
-            }}
-          />
+          <EditIcon handleSetEditable={()=>{setIsCompanyEditable(true)}}/>
         </div>
       )}
     </>

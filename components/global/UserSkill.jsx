@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../../provider/ContextProvider";
+import EditIcon from "./EditIcon";
 
 const UserSkill = ({ label, skills, index }) => {
   const { userJson, setUserJson } = useContext(Context);
@@ -32,7 +33,6 @@ const UserSkill = ({ label, skills, index }) => {
             }}
             onBlur={handleUpdate}
           />
-          <button onClick={handleUpdate}>Save</button>
         </>
       ) : (
         <>
@@ -41,7 +41,7 @@ const UserSkill = ({ label, skills, index }) => {
               ? skills?.join(", ")
               : "NA"}
           </p>
-          <button onClick={() => setIsEdit(true)}>Edit</button>{" "}
+          <EditIcon handleSetEditable={()=>{setIsEdit(true)}}/>{" "}
         </>
       )}
     </div>

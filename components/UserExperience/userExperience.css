@@ -5,6 +5,7 @@
   align-items: flex-start;
   flex-direction: column;
   padding: 0 1rem;
+  color: var(--text-color);
 }
 .experience__details {
   width: 100%;
