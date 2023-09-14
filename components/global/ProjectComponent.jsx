@@ -25,7 +25,9 @@ const ProjectComponent = ({
           <InputComponent
             type="text"
             data={isName ? name : href}
-            setEditable={setIsProjectNameEditable}
+            handleSetEditable={(value) => {
+              setIsProjectNameEditable(value);
+            }}
             fieldName={
               isName
                 ? `projects.${index}.projectName`
@@ -86,7 +88,9 @@ const ProjectComponent = ({
             data={technology ? technology?.join(", ") : ""}
             fieldName={`projects.${index}.technologiesUsed`}
             isTextarea={false}
-            setEditable={setIsTechEditable}
+            handleSetEditable={(value) => {
+              setIsTechEditable(value);
+            }}
             type={"text"}
             seperator={","}
             index={index}
@@ -120,7 +124,9 @@ const ProjectComponent = ({
             data={source}
             fieldName={`projects.${index}.sourceCodeLink`}
             isTextarea={false}
-            setEditable={setIsSourceEditable}
+            handleSetEditable={(value) => {
+              setIsSourceEditable(value);
+            }}
             type={"text"}
             placeholder={"Source Link"}
           />

@@ -10,14 +10,14 @@ const ListComponent = ({ items, isProject, fieldName, index }) => {
     <>
       {isFeatureEditable ? (
         <InputComponent
-        isArray={true}
+          isArray={true}
           data={items ? items : ""}
           placeholder={"Points Seperated by dot"}
           fieldName={fieldName}
           index={index}
           isTextarea={true}
           seperator={"."}
-          setEditable={setIsFeatureEditable}
+          handleSetEditable={(value) => setIsFeatureEditable(value)}
           isTrim={true}
         />
       ) : (
@@ -42,7 +42,11 @@ const ListComponent = ({ items, isProject, fieldName, index }) => {
               *Description Must be more than 100 word
             </li>
           )}
-          <EditIcon handleSetEditable={()=>{setIsFeatureEditable(true)}}/>
+          <EditIcon
+            handleSetEditable={() => {
+              setIsFeatureEditable(true);
+            }}
+          />
         </ul>
       )}
     </>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import InputComponent from "./InputComponent";
-import { AiFillEdit } from "react-icons/ai";
 import EditIcon from "./EditIcon";
 
 const PeriodWrapper = ({ data, index }) => {
@@ -19,7 +18,9 @@ const PeriodWrapper = ({ data, index }) => {
           index={index}
           isPeriod={true}
           isExp={true}
-          setEditable={setIsPeriodEditable}
+          handleSetEditable={(value) => {
+            setIsPeriodEditable(value);
+          }}
         />
       ) : (
         <div className="flex">
@@ -40,7 +41,11 @@ const PeriodWrapper = ({ data, index }) => {
               ? `${data?.joining} - ${data?.leaving}`
               : "*DOJ/DOL Mandatory"}
           </span>
-          <EditIcon handleSetEditable={()=>{setIsPeriodEditable(true)}}/>
+          <EditIcon
+            handleSetEditable={() => {
+              setIsPeriodEditable(true);
+            }}
+          />
         </div>
       )}
     </>

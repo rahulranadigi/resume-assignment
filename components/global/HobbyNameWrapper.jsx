@@ -14,7 +14,7 @@ const HobbyNameWrapper = ({ hobby, index }) => {
           fieldName={`hobbies.${index}.hobbyName`}
           index={index}
           isTextarea={false}
-          setEditable={setIsHobbyNameEditable}
+          handleSetEditable={(value)=>{setIsHobbyNameEditable(value)}}
           type={"text"}
         />
       ) : (

@@ -21,7 +21,9 @@ const HeaderSection = ({ name, links, details }) => {
             placeholder={"User name"}
             fieldName={"name"}
             type={"text"}
-            setEditable={setIsHeadingEditable}
+            handleSetEditable={(value) => {
+              setIsHeadingEditable(value);
+            }}
           />
         ) : (
           <div
@@ -72,9 +74,11 @@ const HeaderSection = ({ name, links, details }) => {
                 : ""
             }
             fieldName={"details"}
-            setEditable={setIsLoactionEdit}
             isLocation={true}
             placeholder={"city, state, country"}
+            handleSetEditable={(value) => {
+              setIsLoactionEdit(value);
+            }}
           />
         ) : (
           <div className="flex">
@@ -96,7 +100,7 @@ const HeaderSection = ({ name, links, details }) => {
             />
             <EditIcon
               handleSetEditable={() => {
-                setIsMobileEditable(true);
+                setIsLoactionEdit(true);
               }}
             />
           </div>
@@ -107,7 +111,9 @@ const HeaderSection = ({ name, links, details }) => {
               type={"email"}
               data={details?.email ? details.email : ""}
               fieldName={"details.email"}
-              setEditable={setIsEmailEditable}
+              handleSetEditable={(value) => {
+                setIsEmailEditable(value);
+              }}
               placeholder={"email"}
               isEmail={true}
             />
@@ -134,7 +140,9 @@ const HeaderSection = ({ name, links, details }) => {
               data={details?.mobile ? details.mobile : ""}
               fieldName={"details.mobile"}
               placeholder={"Mobile no"}
-              setEditable={setIsMobileEditable}
+              handleSetEditable={(value) => {
+                setIsMobileEditable(value);
+              }}
               type={"tel"}
               isMobile={true}
             />

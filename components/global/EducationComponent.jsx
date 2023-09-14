@@ -18,7 +18,7 @@ const EducationComponent = ({ name, degree, location, period, index }) => {
             fieldName={`education.${index}.institution`}
             placeholder={"College Name"}
             isTextarea={false}
-            setEditable={setIsHeadingEditable}
+            handleSetEditable={(value)=>{setIsHeadingEditable(value)}}
             type={"text"}
           />
         ) : (
@@ -38,7 +38,7 @@ const EducationComponent = ({ name, degree, location, period, index }) => {
             fieldName={`education.${index}.stuided`}
             isTextarea={false}
             placeholder={"Degree"}
-            setEditable={setIsCollegeNameEditable}
+            handleSetEditable={(value)=>{setIsCollegeNameEditable(value)}}
             type={"text"}
           />
         ) : (
@@ -64,7 +64,7 @@ const EducationComponent = ({ name, degree, location, period, index }) => {
             index={index}
             placeholder={"city, state, country"}
             isLocation={true}
-            setEditable={setIsLocationEditable}
+            handleSetEditable={(value)=>{setIsLocationEditable(value)}}
             type={"text"}
           />
         ) : (
@@ -91,7 +91,7 @@ const EducationComponent = ({ name, degree, location, period, index }) => {
             isExp={false}
             isPeriod={true}
             seperator={"-"}
-            setEditable={setIsPeriodEditable}
+            handleSetEditable={(value)=>{setIsPeriodEditable(value)}}
             type={"text"}
           />
         ) : (

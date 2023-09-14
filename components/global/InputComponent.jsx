@@ -19,12 +19,16 @@ const InputComponent = ({
   isEmail,
   isMobile,
   isTrim,
+  handleSetEditable
 }) => {
   const [value, setValue] = useState(isArray ? data?.join("") : data);
   const { userJson, setUserJson } = useContext(Context);
   const inputRef = useRef(null);
   const handleUpdate = () => {
-    setEditable(false);
+    //setEditable(false);
+    if (handleSetEditable) {
+      handleSetEditable(false)
+    }
     const updatedUserJson = { ...userJson };
     const fieldPath = fieldName.split(".");
     let currentObj = updatedUserJson;
@@ -68,7 +72,7 @@ const InputComponent = ({
     if (isEmail) {
       if (!validateEmail(value)) {
         toast.error("Email is not valid..");
-        setEditable(true);
+        handleSetEditable(true)
         inputRef.current.select();
         return;
       }
@@ -76,7 +80,7 @@ const InputComponent = ({
     if (isMobile) {
       if (!validateMobileNumber(value)) {
         toast.error("Require 10 digits number..");
-        setEditable(true);
+        handleSetEditable(true)
         inputRef.current.select();
         return;
       }

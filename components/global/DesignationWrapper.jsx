@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import InputComponent from "./InputComponent";
-import { AiFillEdit } from "react-icons/ai";
 import Heading from "./Heading";
 import EditIcon from "./EditIcon";
 
@@ -13,7 +12,7 @@ const DesignationWrapper = ({ data, index }) => {
           data={data?.designation ? data.designation : ""}
           placeholder={"Designation"}
           fieldName={`experience.${index}.designation`}
-          setEditable={setIsHeadingEditable}
+          handleSetEditable={(value)=>{setIsHeadingEditable(value)}}
           type={"text"}
           isTextarea={false}
         />

@@ -15,7 +15,9 @@ const ProfileLinkComponent = ({ name, href, className, index }) => {
               : `details.links.${index}.url`
           }
           index={index}
-          setEditable={setIsEditable}
+          handleSetEditable={(value) => {
+            setIsEditable(value);
+          }}
           type={"text"}
         />
       ) : (

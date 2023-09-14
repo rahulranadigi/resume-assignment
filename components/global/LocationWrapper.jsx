@@ -18,7 +18,9 @@ const LocationWrapper = ({ data, index }) => {
           fieldName={`experience.${index}`}
           isLocation={true}
           index={index}
-          setEditable={setIsLocationEditable}
+          handleSetEditable={(value) => {
+            setIsLocationEditable(value);
+          }}
           type={"text"}
         />
       ) : (

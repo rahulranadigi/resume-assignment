@@ -14,7 +14,7 @@ const CompanyWrapper = ({ data, index }) => {
           placeholder={"Company Name"}
           fieldName={`experience.${index}.companyName`}
           isTextarea={false}
-          setEditable={setIsCompanyEditable}
+          handleSetEditable={(value)=>setIsCompanyEditable(value)}
           type={"text"}
         />
       ) : (

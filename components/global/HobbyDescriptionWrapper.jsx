@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AiFillEdit } from "react-icons/ai";
 import InputComponent from "./InputComponent";
 import EditIcon from "./EditIcon";
 
@@ -13,7 +12,9 @@ const HobbyDescriptionName = ({ hobby, index }) => {
           placeholder={"description"}
           fieldName={`hobbies.${index}.description`}
           index={index}
-          setEditable={setIsDescriptionEditable}
+          handleSetEditable={(value) => {
+            setIsDescriptionEditable(value);
+          }}
           type={"text"}
         />
       ) : (

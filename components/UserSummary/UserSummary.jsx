@@ -2,7 +2,6 @@ import { useState } from "react";
 import ResumeSection from "../global/ResumeSection";
 import "./userSummary.css";
 import InputComponent from "../global/InputComponent";
-import { AiFillEdit } from "react-icons/ai";
 import EditIcon from "../global/EditIcon";
 
 const UserSummary = ({ summary, isSummary }) => {
@@ -16,7 +15,9 @@ const UserSummary = ({ summary, isSummary }) => {
           data={isSummary ? summary : ""}
           placeholder={"*Summary is required"}
           fieldName={"summary"}
-          setEditable={setIsSummaryEditable}
+          handleSetEditable={(value) => {
+            setIsSummaryEditable(value);
+          }}
           type={"text"}
           isTextarea={true}
         />
