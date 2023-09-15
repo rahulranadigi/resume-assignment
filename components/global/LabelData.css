@@ -1,0 +1,13 @@
+.labelData {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+.labelData .labelName::after {
+  content: ":";
+  color: var(--text-color);
+  font-size: 0.8rem;
+}

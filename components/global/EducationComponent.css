@@ -1,0 +1,23 @@
+.education__data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 1rem;
+}
+.college__details > .degree__name {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.period__data {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  font-size: 0.75rem;
+  color: var(--text-color);
+}
+.education__period {
+    font-style: italic;
+  }

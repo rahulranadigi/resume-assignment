@@ -3,7 +3,7 @@ import { Context } from "../../provider/ContextProvider";
 import EditIcon from "./EditIcon";
 
 const UserSkill = ({ label, skills, index }) => {
-  const { userJson, setUserJson } = useContext(Context);
+  const { userJson, handleUserJsonChange } = useContext(Context);
   const [isEdit, setIsEdit] = useState(false);
   const [skill, setSkill] = useState(
     skills.length > 0 ? skills.join(", ") : "NA"
@@ -12,7 +12,7 @@ const UserSkill = ({ label, skills, index }) => {
   const handleUpdate = () => {
     const updatedUserJson = { ...userJson };
     updatedUserJson.userskills[index].skills = skill?.split(",");
-    setUserJson(updatedUserJson);
+    handleUserJsonChange(updatedUserJson);
     setIsEdit(false);
   };
 

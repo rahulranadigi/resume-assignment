@@ -1,0 +1,21 @@
+.project__section {
+  width: 100%;
+}
+.project__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 0 1rem;
+}
+
+.project__list {
+  margin: 0rem 2rem;
+  font-size: 0.79rem;
+}
+.technologies {
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }

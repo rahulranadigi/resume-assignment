@@ -1,0 +1,11 @@
+.theme__switcher{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 47px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    cursor: pointer;
+}

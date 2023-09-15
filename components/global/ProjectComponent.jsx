@@ -4,6 +4,7 @@ import ListComponent from "./ListComponent";
 import Heading from "./Heading";
 import InputComponent from "./InputComponent";
 import EditIcon from "./EditIcon";
+import './ProjectComponent.css'
 
 const ProjectComponent = ({
   name,

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Heading from "./Heading";
 import InputComponent from ".././global/InputComponent";
-import { AiFillEdit } from "react-icons/ai";
 import EditIcon from "./EditIcon";
+import './EducationComponent.css'
 
 const EducationComponent = ({ name, degree, location, period, index }) => {
   const [isHeadingEditable, setIsHeadingEditable] = useState(false);

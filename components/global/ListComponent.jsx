@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AiFillEdit } from "react-icons/ai";
 import InputComponent from "./InputComponent";
 import EditIcon from "./EditIcon";
 

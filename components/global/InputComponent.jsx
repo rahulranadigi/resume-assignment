@@ -2,7 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import { Context } from "../../provider/ContextProvider";
 import { validateEmail, validateMobileNumber } from "../../helper/helper";
 import { toast } from "react-toastify";
-import './InputComponent.css'
+import "./InputComponent.css";
 
 const InputComponent = ({
   type,
@@ -19,15 +19,14 @@ const InputComponent = ({
   isEmail,
   isMobile,
   isTrim,
-  handleSetEditable
+  handleSetEditable,
 }) => {
   const [value, setValue] = useState(isArray ? data?.join("") : data);
-  const { userJson, setUserJson } = useContext(Context);
+  const { userJson, handleUserJsonChange } = useContext(Context);
   const inputRef = useRef(null);
   const handleUpdate = () => {
-    //setEditable(false);
     if (handleSetEditable) {
-      handleSetEditable(false)
+      handleSetEditable(false);
     }
     const updatedUserJson = { ...userJson };
     const fieldPath = fieldName.split(".");
@@ -46,7 +45,7 @@ const InputComponent = ({
       currentObj[fieldPath[fieldPath?.length - 1]].country = values[2]
         ? values[2]
         : "";
-      setUserJson(updatedUserJson);
+      handleUserJsonChange(updatedUserJson);
       return;
     }
     if (isPeriod) {
@@ -66,13 +65,13 @@ const InputComponent = ({
         values[0]?.trim() !== "" ? values[0] : "";
       currentObj[fieldPath[fieldPath?.length - 1]].completed =
         values[1]?.trim() !== "" ? values[1] : "";
-      setUserJson(updatedUserJson);
+      handleUserJsonChange(updatedUserJson);
       return;
     }
     if (isEmail) {
       if (!validateEmail(value)) {
         toast.error("Email is not valid..");
-        handleSetEditable(true)
+        handleSetEditable(true);
         inputRef.current.select();
         return;
       }
@@ -80,7 +79,7 @@ const InputComponent = ({
     if (isMobile) {
       if (!validateMobileNumber(value)) {
         toast.error("Require 10 digits number..");
-        handleSetEditable(true)
+        handleSetEditable(true);
         inputRef.current.select();
         return;
       }
@@ -89,7 +88,7 @@ const InputComponent = ({
       currentObj[fieldPath[fieldPath.length - 1]] = seperator
         ? value?.split(seperator)
         : value;
-      setUserJson(updatedUserJson);
+      handleUserJsonChange(updatedUserJson);
       return;
     }
     currentObj[fieldPath[fieldPath.length - 1]] = seperator
@@ -97,13 +96,13 @@ const InputComponent = ({
           return s.trim() !== "" ? s.trim() + "." : "";
         })
       : value;
-    setUserJson(updatedUserJson);
+    handleUserJsonChange(updatedUserJson);
   };
   return (
     <>
       {isTextarea ? (
         <textarea
-        className="textarea"
+          className="textarea"
           id="textarea"
           name="textarea"
           rows="4"
@@ -117,7 +116,7 @@ const InputComponent = ({
         ></textarea>
       ) : (
         <input
-        className="edit__input"
+          className="edit__input"
           type={type}
           value={value}
           onChange={(e) => {

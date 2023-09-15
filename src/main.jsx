@@ -5,6 +5,7 @@ import "./index.css";
 import { ContextProvider } from "../provider/ContextProvider.jsx";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MantineProvider } from "@mantine/core";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ContextProvider>

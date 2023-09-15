@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import InputComponent from "./InputComponent";
-import { AiFillEdit } from "react-icons/ai";
 import EditIcon from "./EditIcon";
 
 const LocationWrapper = ({ data, index }) => {

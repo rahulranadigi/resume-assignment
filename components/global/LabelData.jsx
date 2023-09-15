@@ -1,4 +1,5 @@
 import React from "react";
+import './LabelData.css'
 
 const LabelData = ({ labelName, labelData, isLink, href,isError }) => {
   return (

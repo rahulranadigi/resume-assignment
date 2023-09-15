@@ -11,10 +11,10 @@ import "../global/global.css";
 import "./resume.css";
 
 const Resume = () => {
-  const { userJson, fileName, setUserJson, setFileName } = useContext(Context);
+  const { userJson, fileName, handleUserJsonChange, handleFileNameChange } = useContext(Context);
   const handleClick = () => {
-    setUserJson(null);
-    setFileName("");
+    handleUserJsonChange(null);
+    handleFileNameChange("");
   };
   const handleDownload = () => {
     const jsonString = JSON.stringify(userJson);

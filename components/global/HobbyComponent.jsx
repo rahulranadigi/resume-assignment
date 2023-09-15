@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AiFillEdit } from "react-icons/ai";
 import HobbyNameWrapper from "./HobbyNameWrapper";
 import HobbyDescriptionName from "./HobbyDescriptionWrapper";
 

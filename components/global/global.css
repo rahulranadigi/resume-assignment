@@ -3,29 +3,13 @@
   color: var(--text-color);
   text-decoration: underline;
 }
-.decoration__line {
-  background-color: var(--text-color);
-}
-
-.labelData {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.8rem;
-  color: var(--text-color);
-}
-.labelData .labelName::after {
-  content: ":";
-  color: var(--text-color);
-  font-size: 0.8rem;
-}
 
 .user__section,
 .section__container,
 .user__skills {
   width: 100%;
 }
+
 .user__section {
   display: flex;
   flex-direction: column;
@@ -33,6 +17,7 @@
   align-items: flex-start;
   gap: 1rem;
 }
+
 .section__heading {
   color: var(--header-color);
   font-size: 0.9rem;
@@ -46,11 +31,13 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .skill__heading {
   width: 15%;
   font-size: 0.9rem !important;
   font-weight: 500 !important;
 }
+
 .skills__name {
   width: 80%;
   font-size: 0.75rem !important;
@@ -58,82 +45,46 @@
   background-color: var(--color-background);
   color: var(--text-color);
 }
+
 .skills__name::before {
   content: ":";
   margin-right: 10px;
 }
+
 .list {
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
   font-weight: 400;
 }
+
 .list__items {
   margin: 10px 0px;
 }
-.education__data {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 1rem;
-}
-.college__details > .degree__name {
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: var(--text-color);
-}
-.period__data {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-direction: column;
-  font-size: 0.75rem;
-  color: var(--text-color);
-}
-.education__period {
-  font-style: italic;
-}
-.project__section {
-  width: 100%;
-}
-.project__header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-  margin: 0 1rem;
-}
 
-.project__list {
-  margin: 0rem 2rem;
-  font-size: 0.79rem;
-}
 .error {
   color: red !important;
 }
+
 .bold {
   font-weight: 600;
   color: var(--main-color);
-}
-.technologies {
-  font-style: italic;
-  font-size: 0.8rem;
-  font-weight: 400;
 }
 
 .edit__btn {
   display: none;
 }
+
 .skill__container:hover .edit__btn {
   display: block;
   cursor: pointer;
 }
+
 .flex {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+
 .editBtn {
   padding: 0.1rem 0.2rem;
   font-size: 0.8rem;
@@ -142,6 +93,7 @@
   cursor: pointer;
   color: var(--text-color);
 }
+
 .hover__edit {
   display: none;
   position: absolute;

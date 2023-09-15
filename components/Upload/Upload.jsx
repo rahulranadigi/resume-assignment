@@ -7,7 +7,7 @@ import { Context } from "../../provider/ContextProvider";
 import { toast } from "react-toastify";
 
 const Upload = () => {
-  const { fileName, setFileName, setUserJson } = useContext(Context);
+  const { fileName, handleFileNameChange, handleUserJsonChange } = useContext(Context);
   const inputRef = useRef(null);
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -16,10 +16,10 @@ const Upload = () => {
         toast.error("Only JSON type file is accepted..");
         return;
       } else {
-        setFileName(file.name);
+        handleFileNameChange(file.name);
         const reader = new FileReader();
         reader.onload = (e) => {
-          setUserJson(JSON.parse(e.target.result));
+          handleUserJsonChange(JSON.parse(e.target.result));
         };
         reader.readAsText(file);
         toast.success("Uploaded Successfully...");
@@ -27,8 +27,8 @@ const Upload = () => {
     }
   };
   const handleDelete = () => {
-    setUserJson(null);
-    setFileName("");
+    handleUserJsonChange(null);
+    handleFileNameChange("");
     inputRef.current.value = null;
   };
   useEffect(() => {
