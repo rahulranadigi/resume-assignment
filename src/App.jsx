@@ -10,6 +10,7 @@ function App() {
   const [dark, setDark] = useState(false);
   const { userJson } = useContext(Context);
   useEffect(() => {
+    //would have used toggle to change the theme but not used beacuse whenever the component this effect will not so the theme will automatically set to dark so to avoid that i have used if elese
     if (dark) {
       document.body.classList.add("dark-theme-variable");
     } else {
